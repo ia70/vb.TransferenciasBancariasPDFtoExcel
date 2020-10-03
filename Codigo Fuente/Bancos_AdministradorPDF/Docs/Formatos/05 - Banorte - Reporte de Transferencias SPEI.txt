@@ -1,0 +1,58 @@
+﻿F005
+BANCO MERCANTIL DEL NORTE S.A.
+Reporte de  Transferencias SPEI
+MXN
+0
+Banorte
+
+Clave de Rastreo
+Banco origen
+Nombre del Ordenante
+RFC o CURP del Ordenante
+Cuenta/ CLABE Ordenante
+Banco Destino
+Nombre del Beneficiario
+RFC Beneficiario
+Cuenta/ CLABE Beneficiario
+
+Propósito de la Transferencia
+
+Número de Referencia
+
+Importe a Transferir
+Moneda
+Fecha Aplicación
+Rastreo 
+
+e del Ordenante 
+P del Ordenante 
+E Ordenante 
+Destino 
+e del Beneficiario 
+C Beneficiario 
+E Beneficiario 
+
+a Transferencia 
+
+Referencia 
+
+$
+
+Ejecución 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,57 @@
+﻿F006
+No. Empleado
+REPORTE DE TRANSMISION DE ARCHIVO DE PAGOS
+MXN
+1
+Banorte
+
+Folio electrónico
+Banco origen
+Empresa
+
+No. de cuenta Cargo
+
+
+
+
+Registros Transmitidos
+
+
+
+
+Importe
+Moneda
+Fecha de Transmisión
+electrónico: 
+
+Empresa: 
+
+Cargo: 
+
+
+
+
+
+
+
+
+
+
+
+cación:  
+
+
+No.
+
+
+
+
+
+
+
+
+
+
+
+
+

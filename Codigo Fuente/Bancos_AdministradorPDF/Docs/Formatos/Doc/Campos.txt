@@ -1,0 +1,58 @@
+Identificador de formato
+Identificador
+Nombre de la transacción
+Moneda
+Tiene empleados? 0,1
+Banco Origen
+Banco Destino
+Clave de rastreo
+Nombre de Banco origen
+Nombre de la cuenta origen
+RFC origen
+Número de cuenta origen
+Nombre de Banco destino
+Nombre de la cuenta destino
+RFC destino
+Número de cuenta destino
+No. Registros transmitidos
+Concepto de pago
+Beneficiario
+Referencia
+Folio de Internet
+Importe
+Moneda
+Fecha de aplicación 
+Clave de rastreo
+Nombre de Banco origen
+Nombre de la cuenta origen
+RFC origen
+Número de cuenta origen
+Nombre de Banco destino
+Nombre de la cuenta destino
+RFC destino
+Número de cuenta destino
+No. Registros transmitidos
+Concepto de pago
+Beneficiario
+Referencia
+Folio de Internet
+Importe
+Moneda
+Fecha de aplicación 
+Clave de rastreo
+Nombre de Banco origen
+Nombre de la cuenta origen
+RFC origen
+Número de cuenta origen
+Nombre de Banco destino
+Nombre de la cuenta destino
+RFC destino
+Número de cuenta destino
+No. Registros transmitidos
+Concepto de pago
+Beneficiario
+Referencia
+Folio de Internet
+Importe
+Moneda
+Fecha de aplicación 

@@ -1,0 +1,57 @@
+﻿F003
+Banorte
+Operación: Transferencias a Cuentas de Terceros Banorte
+MXN
+0
+Banorte
+
+Clave de Rastreo
+Banco origen
+Cuenta Origen
+
+No. Cuenta origen
+Banco Destino
+Nombre del Beneficiario
+RFC del Beneficiario
+No. Cuenta Beneficiario
+
+Concepto de Pago
+
+Número de Referencia
+
+Importe
+Moneda
+Fecha de Aplicación
+Rastreo: 
+
+a Origen: 
+
+ - 
+o Destino: 
+l Beneficiario: 
+C del Beneficiario: 
+E - 
+
+Pago: 
+
+eferencia: 
+
+$
+
+cación: 
+
+
+ -
+
+
+
+
+ 
+
+
+
+
+
+
+ M
+

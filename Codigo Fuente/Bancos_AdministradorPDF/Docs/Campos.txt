@@ -1,0 +1,48 @@
+-- GENERAL --
+
+00 --> clave_rastreo			-- Clave de rastreo
+
+
+
+01 --> idbanco_origen			-- No. Cuenta origen
+02 --> nombre_banco_o			-- Banco origen
+03 --> nombre_cuenta_o			-- Nombre del ordenante
+04 --> rfc_o				-- RFC del ordenante
+
+05 --> idbanco_destino			-- No. Cuenta destino
+06 --> nombre_banco_d			-- Banco destino
+07 --> nombre_cuenta_d			-- Nombre cuenta destino
+08 --> rfc_d				-- RFC Beneficiario
+
+09 --> concepto				-- Concepto de pago
+10 --> registros_transmitidos		-- No. Registros transmitidos 
+11 --> beneficiario			-- Beneficiario
+12 --> moneda				-- Moneda
+13 --> referencia			-- Referencia
+14 --> folio_internet			-- Folio de internet
+15 --> importe				-- Importe
+16 --> fecha_aplicacion			-- Fecha de aplicación
+
+
+
+
+
+
+00 --> clave_rastreo			-- Clave de rastreo
+
+01 --> nombre_banco_o			-- Banco origen
+02 --> nombre_cuenta_o			-- Nombre del ordenante
+03 --> rfc_o				-- RFC del ordenante
+04 --> cuenta_origen			-- No. Cuenta origen
+05 --> 
+06 --> 
+07 --> 
+08 --> 
+09 --> 
+10 --> 
+11 --> 
+12 --> 
+13 --> 
+14 --> 
+15 --> 
+16 --> 

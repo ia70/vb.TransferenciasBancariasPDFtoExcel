@@ -1,0 +1,20 @@
+﻿Operación: Transferencias a Cuentas de Terceros Banorte
+Fecha de Operación: 02/Abr./2018
+Hora de Operación: 16:59:05 horas
+Cuenta Origen: Enlace Global PM Pago Fijo Plus - 0476264148
+Cuenta Destino: SISTEMAS JORGE - 0281293191
+Nombre del Beneficiario: SISTEMAS COMUNITARIOS COLECTIVOS S DE SS
+RFC del Beneficiario: SCC140327V45 
+E-mail del Beneficiario: No Capturado
+Banco Destino: Banorte
+Importe: $335.00 MN
+IVA: $0.00 MN
+Comisión: $0.00 MN
+IVA Comisión: $0.00 MN
+Número de Referencia: 39
+Concepto de Pago: ALB
+Fecha de Aplicación: 02/Abr./2018
+Clave de Rastreo: 9084
+Para el caso de aclaración respecto a la operación celebrada, solicitarla a través de los siguientes teléfonos, en un lapso no mayor a 90 días 
+naturales a partir de la fecha señalada en el presente comprobante. Comuníquese con nosotros al 5140 5640 desde la Cd. De México y 01 800 
+DIRECTA (347 3282) en el Interior de la República, de lunes a viernes de 8:00 a 20:00 hrs. y sábados de 8:00 a 14:00 hrs.

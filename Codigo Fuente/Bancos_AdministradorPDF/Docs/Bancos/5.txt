@@ -1,0 +1,52 @@
+10/5/2018 Impresión NBXI
+1/1
+Imprimir  Cerrar
+Reporte de  Transferencias SPEI
+BANCO MERCANTIL DEL NORTE S.A.
+ 
+RFC: BMN-930209-927
+10/05/2018 14:59
+ 
+Cuenta/ CLABE Ordenante 0316895040
+Nombre del Ordenante SISTEMAS COMUNITARIOS COLECTIVOS S DE SS
+RFC o CURP del Ordenante SCC140327V45
+Moneda MXP
+ID Tercero JULIO EDGAR
+Nombre del Beneficiario JULIO EDGAR PERALTA ALVAREZ
+Cuenta/ CLABE Beneficiario 021180063414091525
+RFC Beneficiario PEAJ810405DF2
+Banco Destino HSBC
+Importe a Transferir $10,531.27
+IVA $0.00
+Fecha Aplicación 10/05/2018
+Número de Referencia 022
+Propósito de la Transferencia 46078
+Clave de Rastreo 8846CAP1201805100585748078
+Confirmación OK. OPERACION EFECTUADA
+Comisión $5.00
+IVA Comisión $0.80
+Capturó jorge
+Fecha Captura 10/05/2018 14:51:49 p.m.
+Ejecutó jorge
+Fecha de Ejecución 10/05/2018 14:56:35 p.m.
+Autorizó 1: 
+Fecha Autorización 1: 
+Autorizó 2: 
+Fecha Autorización 2: 
+Autorizó 3: 
+Fecha Autorización 3: 
+AutExcepción 1: 
+Fecha AutExcepción 1: 
+AutExcepción 2: 
+Fecha AutExcepción 2: 
+Modo de Ejecución Individual
+Nombre del Archivo 
+ 
+Operación realizada a través de los equipos de computo que procesan las peticiones de la Banca por Internet y que se ubican en la ciudad de
+México, D.F.
+ 
+Para el caso de aclaración respecto a la operación celebrada, se podrá acudir a la Unidad Especializada de Atención a Aclaraciones de la Institución,
+según corresponda al lugar de celebración de la operación, o solicitarla a través de los siguientes teléfonos, en un lapso no mayor a 90 días
+naturales a partir de la fecha señalada en el presente comprobante: 
+ 
+México D.F. (55) 5140 5600 - Monterrey (81) 8156 9600 ? Guadalajara (33) 3669 9000 - Resto del país 01 800 226 6783

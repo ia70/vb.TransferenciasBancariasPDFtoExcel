@@ -1,0 +1,49 @@
+﻿No. Empleado Nombre Tipo Cuenta No. de Cuenta Importe Estatus Código Descripción
+0000090008 ROBERTO RAMIREZ COBIAN 01 000000001013670244 $4,514.32 APLICADO 00 ACEPTADO
+ Fecha de  Impresión : 01/08/2018
+REPORTE DE TRANSMISION DE ARCHIVO DE PAGOS Folio electrónico: 010820184263001PN0674685696 
+Empresa: 06746 SISTEMAS COMUNITARIOS
+COLECTIVOS S DE SS
+No. de cuenta Cargo: 0316895040
+Tipo de Pago: OTROS 
+Estatus:  APLICADO Registros Transmitidos:
+ 
+Importe:
+ 
+1
+ 
+$ 4,514.32
+Fecha y Hora de Transmisión:  01-08-2018, 13:38 hrs
+ 
+Fecha de Aplicación:  01-08-2018
+ 
+Registros Aplicados:
+ 
+Importe:
+ 
+Registros Rechazados:
+ 
+Importe:
+1
+ 
+$4,514.32
+ 
+0
+ 
+$0.00
+ 
+ 
+Comisión por archivo de pagos:  $ 0.00
+ 
+IVA:  $ 0.00 
+ 
+Detalle
+ 
+ 
+Operación realizada a través de los equipos de computo que procesan las peticiones de la Banca por Internet y que se ubican en la
+ciudad de México, D.F. 
+ 
+Para el caso de aclaración respecto a la operación celebrada, se podrá acudir a la Unidad Especializada de Atención a Aclaraciones
+de la Institución, según corresponda al lugar de celebración de la operación, o solicitarla a través de los siguientes teléfonos, en un
+lapso no mayor a 90 días naturales a partir de la fecha señalada en el presente comprobante: México D.F. (55) 5140 5600 –
+Monterrey (81) 8156 9600 – Guadalajara (33) 3669 9000 – Resto del país 01 800 226 6783.

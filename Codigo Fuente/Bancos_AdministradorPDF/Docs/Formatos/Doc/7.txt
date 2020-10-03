@@ -1,0 +1,53 @@
+﻿24/7/2018 Impresión NBXI
+1/1
+Imprimir  
+Cerrar
+Transferencias / Otros Bancos Nacional - SPEI (Mismo día)
+BANCO MERCANTIL DEL NORTE S.A.
+ 
+RFC: BMN-930209-927
+24/07/2018 12:10:27
+ 
+Cuenta/ CLABE Ordenante 0363124016
+Nombre del Ordenante SISTEMAS COMUNITARIOS COLECTIVOS S DE SS
+RFC o CURP del Ordenante SCC140327V45
+Moneda MXP
+ID Tercero MIGUEL ANGEL
+Nombre del Beneficiario MIGUEL ANGEL RODRIGUEZ CASTRO
+Cuenta/ CLABE Beneficiario 021680040206055988
+RFC Beneficiario ROCM750506
+Banco Destino HSBC
+Importe a Transferir $55,000.00
+IVA $0.00
+Fecha Aplicación 24/jul/2018 00:00:00 a.m.
+Número de Referencia 01
+Propósito de la Transferencia 74056
+Clave de Rastreo 8846CAP3201807240615987889
+Confirmación PROCESO COMPLETO
+Comisión $5.00
+IVA Comisión $0.80
+Capturó MARIANA
+Fecha Captura 24/jul/2018 11:49:00 a.m.
+Ejecutó MARIANA
+Fecha de Ejecución 24/jul/2018 11:54:08 a.m.
+Autorizó 1: 
+Fecha Autorización 1: 
+Autorizó 2: 
+Fecha Autorización 2: 
+Autorizó 3: 
+Fecha Autorización 3: 
+AutExcepción 1: 
+Fecha AutExcepción 1: 
+AutExcepción 2: 
+Fecha AutExcepción 2: 
+Modo de Ejecución Individual
+Nombre del Archivo 
+ 
+Operación realizada a través de los equipos de computo que procesan las peticiones de la Banca por Internet y que se ubican en la ciudad de
+México, D.F.
+ 
+Para el caso de aclaración respecto a la operación celebrada, se podrá acudir a la Unidad Especializada de Atención a Aclaraciones de la
+Institución, según corresponda al lugar de celebración de la operación, o solicitarla a través de los siguientes teléfonos, en un lapso no mayor a
+90 días naturales a partir de la fecha señalada en el presente comprobante: 
+ 
+México D.F. (55) 5140 5600 - Monterrey (81) 8156 9600 ? Guadalajara (33) 3669 9000 - Resto del país 01 800 226 6783

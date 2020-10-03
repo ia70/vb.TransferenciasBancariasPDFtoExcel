@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B8D960D-9FA2-4CB0-AE9D-073D0369E74E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>AdministradorTicketsBanco.My.MyApplication</StartupObject>
+    <RootNamespace>AdministradorTicketsBanco</RootNamespace>
+    <AssemblyName>AdministradorTicketsBanco</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Administrador de reportes bancarios</ProductName>
+    <PublisherName>XCORU</PublisherName>
+    <SuiteName>Administración</SuiteName>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>AdministradorTicketsBanco.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>AdministradorTicketsBanco.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>xcoru.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\GeneradorFichasMikrotik\GeneradorFichasMikrotik\bin\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.108.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="_GUI\Banco\GUI_BancoDestino.Designer.vb">
+      <DependentUpon>GUI_BancoDestino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_GUI\Banco\GUI_BancoDestino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_GUI\Banco\GUI_BancoOrigen.Designer.vb">
+      <DependentUpon>GUI_BancoOrigen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_GUI\Banco\GUI_BancoOrigen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_GUI\Detalles\GUI_DetallesGeneral.Designer.vb">
+      <DependentUpon>GUI_DetallesGeneral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_GUI\Detalles\GUI_DetallesGeneral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_GUI\Empresa\GUI_EmpresaAgregar.Designer.vb">
+      <DependentUpon>GUI_EmpresaAgregar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_GUI\Empresa\GUI_EmpresaAgregar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_GUI\Empresa\GUI_EmpresaEliminar.Designer.vb">
+      <DependentUpon>GUI_EmpresaEliminar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_GUI\Empresa\GUI_EmpresaEliminar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_GUI\Empresa\GUI_EmpresaVincular.Designer.vb">
+      <DependentUpon>GUI_EmpresaVincular.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_GUI\Empresa\GUI_EmpresaVincular.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_GUI\Importar\GUI_ImportarFormato.Designer.vb">
+      <DependentUpon>GUI_ImportarFormato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_GUI\Importar\GUI_ImportarFormato.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_GUI\Importar\GUI_ImportarPDF.Designer.vb">
+      <DependentUpon>GUI_ImportarPDF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_GUI\Importar\GUI_ImportarPDF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_GUI\GUI_Inicio.Designer.vb">
+      <DependentUpon>GUI_Inicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_GUI\GUI_Inicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_GUI\Importar\GUI_Load_Importar.Designer.vb">
+      <DependentUpon>GUI_Load_Importar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_GUI\Importar\GUI_Load_Importar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_GUI\GUI_Pruebas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_GUI\GUI_Pruebas.Designer.vb">
+      <DependentUpon>GUI_Pruebas.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="_GUI\Importar\GUI_MostrarErrores.Designer.vb">
+      <DependentUpon>GUI_MostrarErrores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_GUI\Importar\GUI_MostrarErrores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_GUI\Pruebas.Designer.vb">
+      <DependentUpon>Pruebas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="_GUI\Pruebas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_MODULOS\Configuracion.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="_GUI\Banco\GUI_BancoDestino.resx">
+      <DependentUpon>GUI_BancoDestino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_GUI\Banco\GUI_BancoOrigen.resx">
+      <DependentUpon>GUI_BancoOrigen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_GUI\Detalles\GUI_DetallesGeneral.resx">
+      <DependentUpon>GUI_DetallesGeneral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_GUI\Empresa\GUI_EmpresaAgregar.resx">
+      <DependentUpon>GUI_EmpresaAgregar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_GUI\Empresa\GUI_EmpresaEliminar.resx">
+      <DependentUpon>GUI_EmpresaEliminar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_GUI\Empresa\GUI_EmpresaVincular.resx">
+      <DependentUpon>GUI_EmpresaVincular.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_GUI\Importar\GUI_ImportarFormato.resx">
+      <DependentUpon>GUI_ImportarFormato.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_GUI\Importar\GUI_ImportarPDF.resx">
+      <DependentUpon>GUI_ImportarPDF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_GUI\GUI_Inicio.resx">
+      <DependentUpon>GUI_Inicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_GUI\Importar\GUI_Load_Importar.resx">
+      <DependentUpon>GUI_Load_Importar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_GUI\GUI_Pruebas.resx">
+      <DependentUpon>GUI_Pruebas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_GUI\Importar\GUI_MostrarErrores.resx">
+      <DependentUpon>GUI_MostrarErrores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_GUI\Pruebas.resx">
+      <DependentUpon>Pruebas.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Textura.jpg" />
+    <None Include="Resources\Excel.png" />
+    <None Include="Resources\Excel1.png" />
+    <None Include="Resources\PDF1.png" />
+    <None Include="Resources\Filtro.png" />
+    <None Include="Resources\Carpeta.png" />
+    <None Include="Resources\Archivo.png" />
+    <None Include="Resources\Detalles.png" />
+    <None Include="Resources\Detalles1.png" />
+    <None Include="Resources\Logo.jpeg" />
+    <Content Include="xcoru.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Capa_Identidad\Capa_Identidad.vbproj">
+      <Project>{00e2c59b-63fb-49e9-90cd-4a36b54f1af6}</Project>
+      <Name>Capa_Identidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Capa_Negocio\Capa_Negocio.vbproj">
+      <Project>{5f8470e4-c70d-4fc7-84b6-1fb8968ca204}</Project>
+      <Name>Capa_Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

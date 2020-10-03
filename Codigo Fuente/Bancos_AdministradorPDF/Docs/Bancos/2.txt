@@ -1,0 +1,30 @@
+30/4/2018 BBVA-Bancomer
+https://www11.bbvanet.com.mx/mexiconet23/mexiconet23/OperacionCBTFServlet?proceso=transinter_frecuente_pr&operacion=transinter_frecuente_op&accion=Imp
+30/04/2018 3:44:27 PM
+COMPROBANTE
+Mis operaciones frecuentes - Traspasos a otros bancos
+DISTRIBUIDORA DE INSUMOS EN NEGOCIOS SA DE CV
+30/04/2018
+Resultado del traspaso
+Cuenta de retiro: 0196340385
+Tipo de operación: INTERBANCARIO CON / SIN CHEQUERA
+Banco destino: BANORTE/ IXE
+Cuenta de depósito: 072680004518029493
+Nombre corto: DIN BNTE
+Importe: $332.00
+Fecha de operación: 30/04/2018
+Forma de depósito: MISMO DIA (SPEI)
+Concepto de pago: TRANSFER
+Referencia numérica: 014
+Clave de rastreo: BNET01001804300001577253
+Hora de Operación: 15:44:27
+Folio de internet: 7752709426
+Datos del beneficiario
+Nombre: DISTRIBUIDORA DE INSUMOS EN NEGOCIOS SA
+ Puedes obtener tu Comprobante Electrónico de Pago (CEP) en la pagina de Banxico.
+https://www.banxico.org.mx/cep/ 
+Este vínculo se activará a más tardar dentro de los cinco minutos siguientes a la aceptación de la operación.
+El traspaso se encuentra en proceso de validación y aplicación, le recomendamos verificar el depósito en el
+banco destino.
+BBVA BANCOMER, S.A., INSTITUCION DE BANCA MULTIPLE, GRUPO FINANCIERO BBVA BANCOMER.
+Cerrar Imprimir

@@ -1,0 +1,50 @@
+﻿Imprimir
+Cerrar
+Transferencias a Cuentas de Terceros Banorte / Ixe
+BANCO MERCANTIL DEL NORTE S.A.
+RFC: BMN-930209-927
+03/05/2018 13:30
+Cuenta/ CLABE Ordenante 0273658777
+Nombre del Ordenante
+SERVICIOS DE NEGOCIOS EMPRESARIALES 
+ADMINISTRATIVO
+RFC Ordenante SNE101126JA9
+Moneda MXP
+ID Tercero sistemas
+Nombre del Beneficiario sistemas comunitarios colectivos s de ss
+Cuenta/ CLABE Beneficiario 0281293191
+Titular de la Cuenta
+SERVICIOS DE NEGOCIOS EMPRESARIALES 
+ADMINISTRATIVO
+RFC Beneficiario SCC140327V45 
+Importe a Transferir $1,029.75
+IVA $0.00
+Fecha Aplicación 03/05/2018
+Número de Referencia 013
+Propósito de la Transferencia cred
+Clave de Rastreo 19666
+Confirmación OK. OPERACION EFECTUADA
+Comisión $0.00
+IVA Comisión $0.00
+Capturó karla
+Fecha Captura 03/05/2018 01:18:49 p.m.
+Ejecutó karla
+Fecha de Ejecución 03/05/2018 01:21:51 p.m.
+Autorizó 1:
+Fecha Autorización 1:
+Autorizó 2:
+Fecha Autorización 2:
+Autorizó 3:
+Fecha Autorización 3:
+AutExcepción 1:
+Fecha AutExcepción 1:
+AutExcepción 2:
+Fecha AutExcepción 2:
+Modo de Ejecución Individual
+Nombre del Archivo
+Operación realizada a través de los equipos de computo que procesan las peticiones de la Banca por Internet y que se ubican en 
+la ciudad de México, D.F.
+Para el caso de aclaración respecto a la operación celebrada, se podrá acudir a la Unidad Especializada de Atención a Aclaraciones 
+de la Institución, según corresponda al lugar de celebración de la operación, o solicitarla a través de los siguientes teléfonos, en 
+un lapso no mayor a 90 días naturales a partir de la fecha señalada en el presente comprobante: 
+México D.F. (55) 5140 5600 - Monterrey (81) 8156 9600 ? Guadalajara (33) 3669 9000 - Resto del país 01 800 226 6783 
