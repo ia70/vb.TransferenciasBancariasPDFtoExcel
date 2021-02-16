@@ -66,6 +66,7 @@ Public Class N_Exportar
             Hoja.Cells(i, 22).Value = "Número de Cuenta"
             Hoja.Cells(i, 23).Value = "Importe"
             Hoja.Cells(i, 24).Value = "Descripción"
+            Hoja.Cells(i, 25).Value = "Archivo"
 
 
             Hoja.Columns.NumberFormat = "@"
@@ -83,12 +84,12 @@ Public Class N_Exportar
     Private Sub ExcelFormato()
         Try
             'ANCHO DE COLUMNAS
-            Hoja.Range("A1:X" & Total.ToString).Columns.AutoFit()
+            Hoja.Range("A1:Y" & Total.ToString).Columns.AutoFit()
 
-            Hoja.ListObjects.AddEx(Excel.XlListObjectSourceType.xlSrcRange, Hoja.Range("A1:X" & Total.ToString),, Excel.XlYesNoGuess.xlYes)
+            Hoja.ListObjects.AddEx(Excel.XlListObjectSourceType.xlSrcRange, Hoja.Range("A1:Y" & Total.ToString),, Excel.XlYesNoGuess.xlYes)
             Hoja.ListObjects("Tabla1").TableStyle = "TableStyleMedium7"
 
-            Hoja.Range("A1:X" & Total.ToString).HorizontalAlignment = Excel.XlHAlign.xlHAlignLeft
+            Hoja.Range("A1:Y" & Total.ToString).HorizontalAlignment = Excel.XlHAlign.xlHAlignLeft
         Catch ex As Exception
 
         End Try
@@ -125,7 +126,7 @@ Public Class N_Exportar
                 Hoja.Cells(LineaY, 16).Value = Linea(16)
                 Hoja.Cells(LineaY, 17).Value = Linea(17)
                 Hoja.Cells(LineaY, 18).Value = Linea(18)
-
+                Hoja.Cells(LineaY, 25).Value = Linea(19)
 
                 Registros = Val(Hoja.Cells(LineaY, 11).Value)
 
@@ -144,6 +145,7 @@ Public Class N_Exportar
                         Hoja.Cells(LineaY, 22).Value = Lin(3)
                         Hoja.Cells(LineaY, 23).Value = Lin(4)
                         Hoja.Cells(LineaY, 24).Value = Lin(5)
+                        Hoja.Cells(LineaY, 25).Value = Linea(19)
 
                     Next
                 End If

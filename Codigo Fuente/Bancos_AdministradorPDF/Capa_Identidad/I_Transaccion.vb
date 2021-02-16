@@ -27,6 +27,7 @@ Public Class I_Transaccion
     Private _c14 As Decimal = 0.0    '-> Importe
     Private _c15 As String = ""     '-> Moneda
     Private _c16 As String = ""     '-> Fecha de aplicación 
+    Private _c17 As String = ""     '-> Nombre archivo
 
 #End Region
 #Region "Constructor"
@@ -56,7 +57,8 @@ Public Class I_Transaccion
     ''' <param name="c14">Importe</param>
     ''' <param name="c15">Moneda</param>
     ''' <param name="c16">Fecha de aplicación</param>
-    Public Sub New(idtransaccion As String, idformato As String, c0 As String, c1 As String, c2 As String, c3 As String, c4 As String, c5 As String, c6 As String, c7 As String, c8 As String, c9 As String, c10 As String, c11 As String, c12 As String, c13 As String, c14 As Double, c15 As String, c16 As String)
+    ''' <param name="c17">Nombre de archivo</param>
+    Public Sub New(idtransaccion As String, idformato As String, c0 As String, c1 As String, c2 As String, c3 As String, c4 As String, c5 As String, c6 As String, c7 As String, c8 As String, c9 As String, c10 As String, c11 As String, c12 As String, c13 As String, c14 As Double, c15 As String, c16 As String, c17 As String)
         Me.Idtransaccion = idtransaccion
         Me.Idformato = idformato
         _c0 = c0
@@ -76,6 +78,7 @@ Public Class I_Transaccion
         _c14 = c14
         _c15 = c15
         _c16 = c16
+        _c17 = c17
 
         _BO.Tipo = "Origen"
         _BD.Tipo = "Destino"
@@ -350,7 +353,18 @@ Public Class I_Transaccion
             _idformato = value
         End Set
     End Property
-
+    ''' <summary>
+    ''' Nombre archivo
+    ''' </summary>
+    ''' <returns></returns>
+    Public Property C17 As String
+        Get
+            Return _c17
+        End Get
+        Set(value As String)
+            _c17 = value
+        End Set
+    End Property
 #End Region
 #Region "Funciones"
     ''' <summary>
@@ -359,7 +373,7 @@ Public Class I_Transaccion
     ''' <param name="Campo">Número del campo a obtener 0 - 16</param>
     ''' <returns></returns>
     Public Function getValor(ByVal Campo As Integer) As String
-        If Campo > 16 Or Campo < 0 Then
+        If Campo > 17 Or Campo < 0 Then
             Return ""
         End If
 
@@ -398,6 +412,8 @@ Public Class I_Transaccion
                 Return C15
             Case 16
                 Return C16
+            Case 17
+                Return C17
             Case Else
                 Return ""
         End Select
@@ -409,7 +425,7 @@ Public Class I_Transaccion
     ''' <param name="Campo">Número del campo</param>
     ''' <param name="Valor">Valor a establecer</param>
     Public Sub setValor(ByVal Campo As Integer, ByVal Valor As String)
-        If Campo > 16 Or Campo < 0 Then
+        If Campo > 17 Or Campo < 0 Then
             Exit Sub
         End If
         Try
@@ -498,6 +514,8 @@ Public Class I_Transaccion
                     Else
                         C16 = Format(Convert.ToDateTime(Valor).Date, "dd/MM/yyyy")
                     End If
+                Case 17
+                    C17 = Valor
             End Select
         Catch ex As Exception
             'MsgBox("Linea 243 Error: " + ex.ToString)

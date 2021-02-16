@@ -58,7 +58,6 @@ Public Class N_ImportarPDF
         AnalizarCarpeta("\\?\" & _Path, "\\?\" & _Path)
     End Sub
 
-
     Private Sub AnalizarCarpeta(ByVal sDir As String, ByVal CarpetaRaiz As String)
         Dim d As String
         Dim f As String
@@ -79,8 +78,6 @@ Public Class N_ImportarPDF
         Catch ex As Exception
         End Try
     End Sub
-
-
 
 #End Region
 #Region "Privadas"
@@ -408,6 +405,16 @@ Public Class N_ImportarPDF
                 .C8 = ""
             End With
         End If
+
+        'ESTABLECIENDO UBICACION DE ARCHIVO
+        Try
+            Respuesta.C17 = Path.GetFileName(Ubicacion)
+            If Respuesta.C17.Length = 0 Then
+                Respuesta.C17 = ""
+            End If
+        Catch ex As Exception
+            Respuesta.C17 = ""
+        End Try
 
         Return Respuesta
     End Function

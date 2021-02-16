@@ -16,7 +16,7 @@ Public Class D_Transaccion
     ''' <returns>DataTable</returns>
     Public Function Lista() As DataTable
         Dim DB As New DataBase
-        Return DB.Query("SELECT idtransaccion 'ID', idformato 'Formato', c0 'Clave de Rastreo', c1 'Banco Ordenante', c2 'Cuenta Ordenante', c3 'RFC Ordenante', c4 'No. Cuenta Ordenante', c5 'Banco Destino', c6 'Cuenta Destino', c7 'RFC Destino', c8 'No. Cuenta Destino', c9 'RT', c10 'Concepto', c11 'Beneficiario', c12 'Referencia', c13 'Folio de Internet', c14 'Importe', c15 'Moneda', c16 'Fecha' FROM " & Tabla)
+        Return DB.Query("SELECT idtransaccion 'ID', idformato 'Formato', c0 'Clave de Rastreo', c1 'Banco Ordenante', c2 'Cuenta Ordenante', c3 'RFC Ordenante', c4 'No. Cuenta Ordenante', c5 'Banco Destino', c6 'Cuenta Destino', c7 'RFC Destino', c8 'No. Cuenta Destino', c9 'RT', c10 'Concepto', c11 'Beneficiario', c12 'Referencia', c13 'Folio de Internet', c14 'Importe', c15 'Moneda', c16 'Fecha', c17 'Archivo' FROM " & Tabla)
     End Function
 
     ''' <summary>
@@ -32,7 +32,11 @@ Public Class D_Transaccion
         Dim DB_TR As New D_TR_Procesada
 
         Dim Respuesta As Boolean
-        Respuesta = DB.Update("INSERT INTO " & Tabla & " VALUES('" & Obj.Idtransaccion & "','" & Obj.Idformato & "','" & Obj.C0 & "','" & Obj.C1 & "','" & Obj.C2 & "','" & Obj.C3 & "','" & Obj.C4 & "','" & Obj.C5 & "','" & Obj.C6 & "','" & Obj.C7 & "','" & Obj.C8 & "','" & Obj.C9 & "','" & Obj.C10 & "','" & Obj.C11 & "','" & Obj.C12 & "','" & Obj.C13 & "','" & Format(Obj.C14, "#.00").ToString & "','" & Obj.C15 & "','" & Obj.C16 & "')")
+        Try
+            Respuesta = DB.Update("INSERT INTO " & Tabla & " VALUES('" & Obj.Idtransaccion & "','" & Obj.Idformato & "','" & Obj.C0 & "','" & Obj.C1 & "','" & Obj.C2 & "','" & Obj.C3 & "','" & Obj.C4 & "','" & Obj.C5 & "','" & Obj.C6 & "','" & Obj.C7 & "','" & Obj.C8 & "','" & Obj.C9 & "','" & Obj.C10 & "','" & Obj.C11 & "','" & Obj.C12 & "','" & Obj.C13 & "','" & Format(Obj.C14, "#.00").ToString & "','" & Obj.C15 & "','" & Obj.C16 & "','" & Obj.C17 & "')")
+        Catch ex As Exception
+            Return False
+        End Try
 
         If Not Respuesta Then
             Return False
@@ -64,7 +68,7 @@ Public Class D_Transaccion
     ''' <returns>True - Si exitoso</returns>
     Public Function Consulta(ByVal Registro) As DataTable
         Dim DB As New DataBase
-        Return DB.Query("SELECT idtransaccion 'ID', idformato 'Formato', c0 'Clave de Rastreo', c1 'Banco Ordenante', c2 'Cuenta Ordenante', c3 'RFC Ordenante', c4 'No. Cuenta Ordenante', c5 'Banco Destino', c6 'Cuenta Destino', c7 'RFC Destino', c8 'No. Cuenta Destino', c9 'RT', c10 'Concepto', c11 'Beneficiario', c12 'Referencia', c13 'Folio de Internet', c14 'Importe', c15 'Moneda', c16 'Fecha' FROM " & Tabla & " WHERE " & PrimaryKey & "='" & Registro & "'")
+        Return DB.Query("SELECT idtransaccion 'ID', idformato 'Formato', c0 'Clave de Rastreo', c1 'Banco Ordenante', c2 'Cuenta Ordenante', c3 'RFC Ordenante', c4 'No. Cuenta Ordenante', c5 'Banco Destino', c6 'Cuenta Destino', c7 'RFC Destino', c8 'No. Cuenta Destino', c9 'RT', c10 'Concepto', c11 'Beneficiario', c12 'Referencia', c13 'Folio de Internet', c14 'Importe', c15 'Moneda', c16 'Fecha', c17 'Archivo' FROM " & Tabla & " WHERE " & PrimaryKey & "='" & Registro & "'")
     End Function
 
     ''' <summary>
@@ -75,7 +79,7 @@ Public Class D_Transaccion
     Public Function Editar(ByVal Obj As I_Transaccion) As Boolean
         Dim DB As New DataBase
 
-        Return DB.Update("UPDATE " & Tabla & " SET '" & Obj.Idformato & "',c0='" & Obj.C0 & "',c1='" & Obj.C1 & "',c2='" & Obj.C2 & "',c3='" & Obj.C3 & "',c4='" & Obj.C4 & "',c5='" & Obj.C5 & "',c6='" & Obj.C6 & "',c7='" & Obj.C7 & "',c8='" & Obj.C8 & "',c9='" & Obj.C9 & "',c10='" & Obj.C10 & "',c11='" & Obj.C11 & "',c12='" & Obj.C12 & "',c13='" & Obj.C13 & "',c14=" & Obj.C14 & ",c15='" & Obj.C15 & "',c16='" & Obj.C16 & "' WHERE " & PrimaryKey & "='" & Obj.Idtransaccion & "'")
+        Return DB.Update("UPDATE " & Tabla & " SET '" & Obj.Idformato & "',c0='" & Obj.C0 & "',c1='" & Obj.C1 & "',c2='" & Obj.C2 & "',c3='" & Obj.C3 & "',c4='" & Obj.C4 & "',c5='" & Obj.C5 & "',c6='" & Obj.C6 & "',c7='" & Obj.C7 & "',c8='" & Obj.C8 & "',c9='" & Obj.C9 & "',c10='" & Obj.C10 & "',c11='" & Obj.C11 & "',c12='" & Obj.C12 & "',c13='" & Obj.C13 & "',c14=" & Obj.C14 & ",c15='" & Obj.C15 & "',c16='" & Obj.C16 & "',c17='" & Obj.C17 & "' WHERE " & PrimaryKey & "='" & Obj.Idtransaccion & "'")
 
     End Function
 
