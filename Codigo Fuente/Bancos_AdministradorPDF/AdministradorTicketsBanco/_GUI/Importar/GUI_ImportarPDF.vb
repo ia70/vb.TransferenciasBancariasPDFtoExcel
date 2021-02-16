@@ -6,6 +6,7 @@ Public Class GUI_ImportarPDF
         Dim Ubicacion As String
         Dim Importar As New N_ImportarPDF
 
+        _Errores.Clear()
         DialogoArchivo.ShowDialog()
         Ubicacion = DialogoArchivo.FileName
 
@@ -16,6 +17,7 @@ Public Class GUI_ImportarPDF
             msg("Error al importar archivo!", 2)
         End If
 
+        '_Errores.Clear()
         _Errores = Importar.Errores
         _No_Errores = Importar.No_Errores
 
@@ -28,6 +30,7 @@ Public Class GUI_ImportarPDF
         Dim Archivos As New ArrayList
         Dim Cadena As String = "Archivos importados:" & Chr(10)
 
+        _Errores.Clear()
         DialogoCarpeta.ShowDialog()
         Ubicacion = DialogoCarpeta.SelectedPath
 

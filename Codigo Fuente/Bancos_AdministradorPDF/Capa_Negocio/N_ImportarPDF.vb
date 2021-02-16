@@ -10,13 +10,13 @@ Public Class N_ImportarPDF
     Private CamposInicio As DataTable
     Private CamposFin As New DataTable
     Private _ListaTransacciones As New List(Of I_Transaccion)
-    Public Errores(200, 2) As String
+    Public Errores As Hashtable
     Public No_Errores As Integer = 0
 
 #End Region
 #Region "Constructor"
     Public Sub New()
-        Errores = Nothing
+        Errores = New Hashtable
         CargarDatos()
     End Sub
 
@@ -44,7 +44,7 @@ Public Class N_ImportarPDF
     ''' <param name="_Path">Archivo</param>
     ''' <returns>True - Si exitoso</returns>
     Public Function ImportarArchivo(ByVal _Path As String) As Boolean
-        If Importar(_Path) Then
+        If Importar("\\?\" & _Path) Then
             Return True
         Else
             Return False
@@ -55,13 +55,32 @@ Public Class N_ImportarPDF
     ''' </summary>
     ''' <param name="_Path">Carpeta</param>
     Public Sub ImportarCarpeta(ByVal _Path As String)
-        Dim fileNames = My.Computer.FileSystem.GetFiles(_Path, FileIO.SearchOption.SearchAllSubDirectories, "*.pdf")
-
-        For Each fileName As String In fileNames
-            Importar(fileName)
-        Next
-
+        AnalizarCarpeta("\\?\" & _Path, "\\?\" & _Path)
     End Sub
+
+
+    Private Sub AnalizarCarpeta(ByVal sDir As String, ByVal CarpetaRaiz As String)
+        Dim d As String
+        Dim f As String
+
+        Try
+            For Each f In Directory.GetFiles(sDir, "*.pdf")
+                Try
+                    Importar(f)
+                Catch ex As Exception
+                End Try
+            Next
+            Try
+                For Each d In Directory.GetDirectories(sDir)
+                    AnalizarCarpeta(d, CarpetaRaiz)
+                Next
+            Catch ex As Exception
+            End Try
+        Catch ex As Exception
+        End Try
+    End Sub
+
+
 
 #End Region
 #Region "Privadas"
@@ -133,11 +152,9 @@ Public Class N_ImportarPDF
         End If
 
         If v1 And v2 And v3 And v4 Then
-            Errores(No_Errores - 1, 0) = Path.GetFileName(Ubicacion)
-            Errores(No_Errores - 1, 1) = "Formato no registrado!."
+            Errores.Add(Ubicacion, "Formato no registrado!.")
         Else
-            Errores(No_Errores - 1, 0) = Path.GetFileName(Ubicacion)
-            Errores(No_Errores - 1, 1) = "No es reporte bancario!."
+            Errores.Add(Ubicacion, "No es reporte bancario!.")
         End If
 
     End Sub
@@ -306,7 +323,7 @@ Public Class N_ImportarPDF
             Dim its As New parser.SimpleTextExtractionStrategy
             Texto &= parser.PdfTextExtractor.GetTextFromPage(ArchivoPDF, i, its)
         Next
-
+        ArchivoPDF.Close()
         Return Texto
     End Function
 
@@ -366,8 +383,7 @@ Public Class N_ImportarPDF
                 If i = 1 Then
                     If DB.Consultar(Auxiliar) Then
                         No_Errores += 1
-                        Errores(No_Errores - 1, 0) = Path.GetFileName(Ubicacion)
-                        Errores(No_Errores - 1, 1) = "Formato duplicado!."
+                        Errores.Add(Ubicacion, "Formato duplicado!.")
                         Return Nothing
                     End If
                 End If

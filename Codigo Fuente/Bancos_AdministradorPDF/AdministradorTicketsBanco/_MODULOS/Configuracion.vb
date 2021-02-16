@@ -6,8 +6,9 @@
     Public db_Transaccion As DataTable
 
     'ERRORES -----------------------------------------
-    Public _Errores(200, 2) As String
+    Public _Errores As New Hashtable
     Public _No_Errores As Integer
+    Public G_MostrarErrores As Boolean = True
     '-------------------------------------------------
 
     ''' <summary>
@@ -30,5 +31,31 @@
             Case Else
                 MsgBox(Mensaje, vbInformation, NombreEmpresa)
         End Select
+    End Sub
+
+    ''' <summary>
+    ''' Evalua Errores
+    ''' </summary>
+    ''' <param name="ex"></param>
+    Public Sub X(Optional ByVal ex As Exception = Nothing)
+        Const fic As String = "log.txt"
+
+        If Not ex Is Nothing Then
+            If G_MostrarErrores Then
+                msg(ex.StackTrace.ToString, 2)
+            Else
+                Try
+                    Dim sw As New IO.StreamWriter(fic, True)
+                    sw.WriteLine(vbCrLf + "------------------------------------------------------------------------------------------------------")
+                    sw.WriteLine("/// ----> " + Now.ToString)
+                    sw.WriteLine(ex.Source.ToString)
+                    sw.WriteLine(ex.Message.ToString)
+                    sw.WriteLine(ex.StackTrace.ToString)
+                    sw.Close()
+                    Console.WriteLine(ex.StackTrace.ToString)
+                Catch exp As Exception
+                End Try
+            End If
+        End If
     End Sub
 End Module

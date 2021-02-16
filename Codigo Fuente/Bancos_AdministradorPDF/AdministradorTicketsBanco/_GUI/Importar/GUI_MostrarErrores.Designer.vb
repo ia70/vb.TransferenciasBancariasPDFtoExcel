@@ -29,7 +29,9 @@ Partial Class GUI_MostrarErrores
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.P_Header = New System.Windows.Forms.Panel()
+        Me.btnMoveraCarpeta = New System.Windows.Forms.Button()
         Me.txtTitulo = New System.Windows.Forms.Label()
+        Me.diaCarpeta = New System.Windows.Forms.FolderBrowserDialog()
         CType(Me.Tabla, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.P_Header.SuspendLayout()
         Me.SuspendLayout()
@@ -77,6 +79,7 @@ Partial Class GUI_MostrarErrores
         'P_Header
         '
         Me.P_Header.BackgroundImage = Global.AdministradorTicketsBanco.My.Resources.Resources.Textura
+        Me.P_Header.Controls.Add(Me.btnMoveraCarpeta)
         Me.P_Header.Controls.Add(Me.txtTitulo)
         Me.P_Header.Dock = System.Windows.Forms.DockStyle.Top
         Me.P_Header.Location = New System.Drawing.Point(0, 0)
@@ -84,18 +87,39 @@ Partial Class GUI_MostrarErrores
         Me.P_Header.Size = New System.Drawing.Size(743, 95)
         Me.P_Header.TabIndex = 8
         '
+        'btnMoveraCarpeta
+        '
+        Me.btnMoveraCarpeta.BackColor = System.Drawing.Color.LightSlateGray
+        Me.btnMoveraCarpeta.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnMoveraCarpeta.FlatAppearance.BorderSize = 0
+        Me.btnMoveraCarpeta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnMoveraCarpeta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue
+        Me.btnMoveraCarpeta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMoveraCarpeta.ForeColor = System.Drawing.Color.White
+        Me.btnMoveraCarpeta.Location = New System.Drawing.Point(0, 53)
+        Me.btnMoveraCarpeta.Name = "btnMoveraCarpeta"
+        Me.btnMoveraCarpeta.Size = New System.Drawing.Size(743, 42)
+        Me.btnMoveraCarpeta.TabIndex = 1
+        Me.btnMoveraCarpeta.Text = "Mover archivos a carpeta"
+        Me.btnMoveraCarpeta.UseVisualStyleBackColor = False
+        '
         'txtTitulo
         '
         Me.txtTitulo.BackColor = System.Drawing.Color.Transparent
-        Me.txtTitulo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtTitulo.Dock = System.Windows.Forms.DockStyle.Top
         Me.txtTitulo.Font = New System.Drawing.Font("Arial", 27.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTitulo.ForeColor = System.Drawing.Color.White
         Me.txtTitulo.Location = New System.Drawing.Point(0, 0)
         Me.txtTitulo.Name = "txtTitulo"
-        Me.txtTitulo.Size = New System.Drawing.Size(743, 95)
+        Me.txtTitulo.Size = New System.Drawing.Size(743, 53)
         Me.txtTitulo.TabIndex = 0
         Me.txtTitulo.Text = "Archivos no importados:"
         Me.txtTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'diaCarpeta
+        '
+        Me.diaCarpeta.Description = "Seleccionar Carpeta"
+        Me.diaCarpeta.RootFolder = System.Environment.SpecialFolder.MyComputer
         '
         'GUI_MostrarErrores
         '
@@ -122,4 +146,6 @@ Partial Class GUI_MostrarErrores
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents btnMoveraCarpeta As Button
+    Friend WithEvents diaCarpeta As FolderBrowserDialog
 End Class
