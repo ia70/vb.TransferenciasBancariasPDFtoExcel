@@ -2,8 +2,10 @@
 
 Public Class GUI_Pruebas
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim ArchivoPDF As New PdfReader("docs/" & txtInicio.Text & ".pdf")
-        Dim Texto = ""
+        Dim Texto As String = ""
+        OpenFileDialog1.ShowDialog()
+        Texto = OpenFileDialog1.FileName
+        Dim ArchivoPDF As New PdfReader(Texto)
 
         For i = 1 To ArchivoPDF.NumberOfPages
             Dim its As New parser.SimpleTextExtractionStrategy
