@@ -198,12 +198,6 @@
     <Compile Include="_GUI\Importar\GUI_MostrarErrores.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="_GUI\Pruebas.Designer.vb">
-      <DependentUpon>Pruebas.vb</DependentUpon>
-    </Compile>
-    <Compile Include="_GUI\Pruebas.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="_MODULOS\Configuracion.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -248,9 +242,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="_GUI\Importar\GUI_MostrarErrores.resx">
       <DependentUpon>GUI_MostrarErrores.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="_GUI\Pruebas.resx">
-      <DependentUpon>Pruebas.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

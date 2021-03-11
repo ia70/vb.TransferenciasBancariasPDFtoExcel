@@ -91,9 +91,12 @@ Public Class GUI_Inicio
             txtBancoDestino.Items.Clear()
 
             txtEmpresa.Items.Add("Ninguno")
-            For Each Linea As DataRow In db_Empresa.Rows
-                txtEmpresa.Items.Add(Linea.Item(1))
-            Next
+            Try
+                For Each Linea As DataRow In db_Empresa.Rows
+                    txtEmpresa.Items.Add(Linea.Item(1))
+                Next
+            Catch ex As Exception
+            End Try
 
             txtBancoOrigen.Items.Add("Ninguno")
             For Each Linea As DataRow In db_BancoOrigen.Rows
