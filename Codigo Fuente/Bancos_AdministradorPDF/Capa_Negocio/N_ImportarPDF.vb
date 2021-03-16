@@ -354,9 +354,9 @@ Public Class N_ImportarPDF
                 Inicio = Inicio + CampoInicio.Length - 1
                 Fin = InStr(Inicio, Cadena, CampoFin)
 
-                If Fin - Inicio < 3 Then
+                If Fin - Inicio < 1 Then
                     Dim y As Integer = 1
-                    While Fin - Inicio < 3
+                    While Fin - Inicio < 1
                         Fin = InStr(Inicio + y, Cadena, CampoFin)
                         y += 1
                     End While
@@ -367,27 +367,45 @@ Public Class N_ImportarPDF
                 Auxiliar = Auxiliar.Replace(Chr(10), " ")
 
                 '------------
-                If Auxiliar.Substring(0, 1) = " " Then
-                    Auxiliar = Auxiliar.Substring(1, Auxiliar.Length - 1)
-                End If
-
-                If Auxiliar.Substring(Auxiliar.Length - 1, 1) = " " Then
-                    Auxiliar = Auxiliar.Substring(0, Auxiliar.Length - 1)
-                End If
-                '------------
-
-                'Verifica Si existe clave de rastreo
-                If i = 1 Then
-                    If DB.Consultar(Auxiliar) Then
-                        No_Errores += 1
-                        Errores.Add(Ubicacion, "Formato duplicado!.")
-                        Return Nothing
+                Try
+                    If Auxiliar.Substring(0, 1) = " " Then
+                        Auxiliar = Auxiliar.Substring(1, Auxiliar.Length - 1)
                     End If
-                End If
+
+                    If Auxiliar.Substring(Auxiliar.Length - 1, 1) = " " Then
+                        Auxiliar = Auxiliar.Substring(0, Auxiliar.Length - 1)
+                    End If
+                Catch ex As Exception
+                    Auxiliar = ""
+                End Try
+
+                '------------
 
                 Respuesta.setValor(i - 1, Auxiliar)
             End If
         Next
+
+        'Validación de la clave de rastreo que sea diferente a 0 o null
+        If Respuesta.C0 = "" Then
+            If Respuesta.C13.Length > 2 Then
+                Respuesta.C0 = Respuesta.C13
+            Else
+                If Respuesta.C12.Length > 2 Then
+                    Respuesta.C0 = Respuesta.C12
+                End If
+            End If
+        End If
+        ' FIN VALIDACION CLAVE RASTREO
+
+        'Verifica Si existe clave de rastreo
+
+        If DB.Consultar(Respuesta.C0) Then
+            No_Errores += 1
+            Errores.Add(Ubicacion, "Formato duplicado!.")
+            Return Nothing
+        End If
+
+        ' Continua ejecución normal ---------------------------------------------------------
 
         If Len(Formato.Rows(Indice).Item(5).ToString) > 0 Then
             Respuesta.C1 = Formato.Rows(Indice).Item(5).ToString
