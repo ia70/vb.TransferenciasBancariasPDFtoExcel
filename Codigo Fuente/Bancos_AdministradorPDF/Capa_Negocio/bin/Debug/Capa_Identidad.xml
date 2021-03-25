@@ -868,6 +868,13 @@ Capa_Identidad
  <param name="Campo">Número del campo</param>
  <param name="Valor">Valor a establecer</param>
 </member>
+<member name="M:Capa_Identidad.I_Transaccion.getDecimal(System.String)">
+ <summary>
+ Convierte cadena en decimal
+ </summary>
+ <param name="cadena"></param>
+ <returns></returns>
+</member>
 <member name="M:Capa_Identidad.I_Transaccion.generarID">
  <summary>
  Genera ID de transacción

@@ -1,5 +1,5 @@
 ﻿F002
-BBVA-Bancomer
+BBVA BANCOMER, S.A., INSTITUCION DE BANCA MULTIPLE, GRUPO FINANCIERO BBVA BANCOMER.
 Mis operaciones frecuentes - Traspasos a otros bancos
 MXN
 0
@@ -7,7 +7,7 @@ BBVA Bancomer
 
 Clave de rastreo
 Banco origen
-Nombre del Ordenante
+
 
 Cuenta de retiro
 Banco destino
@@ -24,7 +24,7 @@ Moneda
 Fecha de operación
 rastreo: 
 
-s bancos
+
 
 retiro: 
 destino: 
@@ -36,7 +36,7 @@ pago:
 
 érica: 
 internet: 
-$
+Importe: $
 
 a de operación: 
 

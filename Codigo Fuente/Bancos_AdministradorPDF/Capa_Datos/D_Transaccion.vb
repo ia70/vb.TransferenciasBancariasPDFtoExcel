@@ -33,7 +33,7 @@ Public Class D_Transaccion
 
         Dim Respuesta As Boolean
         Try
-            Respuesta = DB.Update("INSERT INTO " & Tabla & " VALUES('" & Obj.Idtransaccion & "','" & Obj.Idformato & "','" & Obj.C0 & "','" & Obj.C1 & "','" & Obj.C2 & "','" & Obj.C3 & "','" & Obj.C4 & "','" & Obj.C5 & "','" & Obj.C6 & "','" & Obj.C7 & "','" & Obj.C8 & "','" & Obj.C9 & "','" & Obj.C10 & "','" & Obj.C11 & "','" & Obj.C12 & "','" & Obj.C13 & "','" & Format(Obj.C14, "#.00").ToString & "','" & Obj.C15 & "','" & Obj.C16 & "','" & Obj.C17 & "')")
+            Respuesta = DB.Update("INSERT INTO " & Tabla & " VALUES('" & Obj.Idtransaccion & "','" & Obj.Idformato & "','" & Obj.C0 & "','" & Obj.C1 & "','" & Obj.C2 & "','" & Obj.C3 & "','" & Obj.C4 & "','" & Obj.C5 & "','" & Obj.C6 & "','" & Obj.C7 & "','" & Obj.C8 & "','" & Obj.C9 & "','" & Obj.C10 & "','" & Obj.C11 & "','" & Obj.C12 & "','" & Obj.C13 & "','" & Format(Convert.ToDecimal(Obj.C14), "#,###,##0.00").ToString & "','" & Obj.C15 & "','" & Obj.C16 & "','" & Obj.C17 & "')")
         Catch ex As Exception
             Return False
         End Try

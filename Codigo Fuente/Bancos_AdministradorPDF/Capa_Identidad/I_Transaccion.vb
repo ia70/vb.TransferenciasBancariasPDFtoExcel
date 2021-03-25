@@ -461,7 +461,7 @@ Public Class I_Transaccion
                     C13 = Valor
                     generarID()
                 Case 14
-                    C14 = Convert.ToDecimal(Valor)
+                    C14 = getDecimal(Valor)
                 Case 15
                     C15 = Valor
                 Case 16
@@ -521,6 +521,28 @@ Public Class I_Transaccion
             'MsgBox("Linea 243 Error: " + ex.ToString)
         End Try
     End Sub
+
+    ''' <summary>
+    ''' Convierte cadena en decimal
+    ''' </summary>
+    ''' <param name="cadena"></param>
+    ''' <returns></returns>
+    Private Function getDecimal(ByVal cadena As String) As Decimal
+        Dim aux As String
+        Dim num As Decimal
+
+        aux = cadena.Replace(",", "")
+        cadena = aux
+        aux = cadena.Replace(" ", "")
+
+        Try
+            num = Convert.ToDecimal(aux)
+        Catch ex As Exception
+            num = 0.0
+        End Try
+
+        Return num
+    End Function
 
     ''' <summary>
     ''' Genera ID de transacción
