@@ -22,6 +22,7 @@ Partial Class GUI_Pruebas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GUI_Pruebas))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.txtPDF = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -43,20 +44,26 @@ Partial Class GUI_Pruebas
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 12)
+        Me.Button1.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.Button1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(0, 0)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(97, 32)
+        Me.Button1.Size = New System.Drawing.Size(831, 56)
         Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Cargar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Text = "Cargar PDF"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'txtPDF
         '
-        Me.txtPDF.Location = New System.Drawing.Point(216, 12)
+        Me.txtPDF.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtPDF.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPDF.Location = New System.Drawing.Point(0, 56)
         Me.txtPDF.Multiline = True
         Me.txtPDF.Name = "txtPDF"
         Me.txtPDF.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtPDF.Size = New System.Drawing.Size(959, 672)
+        Me.txtPDF.Size = New System.Drawing.Size(831, 463)
         Me.txtPDF.TabIndex = 1
         '
         'Button2
@@ -67,6 +74,7 @@ Partial Class GUI_Pruebas
         Me.Button2.TabIndex = 2
         Me.Button2.Text = "Buscar"
         Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.Visible = False
         '
         'txtInicio
         '
@@ -75,6 +83,7 @@ Partial Class GUI_Pruebas
         Me.txtInicio.Size = New System.Drawing.Size(123, 20)
         Me.txtInicio.TabIndex = 3
         Me.txtInicio.Text = "1"
+        Me.txtInicio.Visible = False
         '
         'txtFin
         '
@@ -82,91 +91,102 @@ Partial Class GUI_Pruebas
         Me.txtFin.Name = "txtFin"
         Me.txtFin.Size = New System.Drawing.Size(123, 20)
         Me.txtFin.TabIndex = 4
+        Me.txtFin.Visible = False
         '
         'Tabla
         '
         Me.Tabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Tabla.Location = New System.Drawing.Point(46, 473)
+        Me.Tabla.Location = New System.Drawing.Point(22, 422)
         Me.Tabla.Name = "Tabla"
         Me.Tabla.Size = New System.Drawing.Size(113, 82)
         Me.Tabla.TabIndex = 6
+        Me.Tabla.Visible = False
         '
         'btnInsertar
         '
-        Me.btnInsertar.Location = New System.Drawing.Point(82, 195)
+        Me.btnInsertar.Location = New System.Drawing.Point(12, 175)
         Me.btnInsertar.Name = "btnInsertar"
         Me.btnInsertar.Size = New System.Drawing.Size(123, 31)
         Me.btnInsertar.TabIndex = 7
         Me.btnInsertar.Text = "Insertar"
         Me.btnInsertar.UseVisualStyleBackColor = True
+        Me.btnInsertar.Visible = False
         '
         'btnConsultar
         '
-        Me.btnConsultar.Location = New System.Drawing.Point(82, 258)
+        Me.btnConsultar.Location = New System.Drawing.Point(12, 238)
         Me.btnConsultar.Name = "btnConsultar"
         Me.btnConsultar.Size = New System.Drawing.Size(123, 31)
         Me.btnConsultar.TabIndex = 8
         Me.btnConsultar.Text = "Consultar"
         Me.btnConsultar.UseVisualStyleBackColor = True
+        Me.btnConsultar.Visible = False
         '
         'btnEditar
         '
-        Me.btnEditar.Location = New System.Drawing.Point(82, 316)
+        Me.btnEditar.Location = New System.Drawing.Point(12, 296)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(123, 31)
         Me.btnEditar.TabIndex = 9
         Me.btnEditar.Text = "Editar"
         Me.btnEditar.UseVisualStyleBackColor = True
+        Me.btnEditar.Visible = False
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(82, 379)
+        Me.btnEliminar.Location = New System.Drawing.Point(12, 359)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(123, 31)
         Me.btnEliminar.TabIndex = 10
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
+        Me.btnEliminar.Visible = False
         '
         'btnCargar
         '
-        Me.btnCargar.Location = New System.Drawing.Point(82, 158)
+        Me.btnCargar.Location = New System.Drawing.Point(12, 138)
         Me.btnCargar.Name = "btnCargar"
         Me.btnCargar.Size = New System.Drawing.Size(123, 31)
         Me.btnCargar.TabIndex = 11
         Me.btnCargar.Text = "Cargar DB"
         Me.btnCargar.UseVisualStyleBackColor = True
+        Me.btnCargar.Visible = False
         '
         'txtConsulta
         '
-        Me.txtConsulta.Location = New System.Drawing.Point(82, 290)
+        Me.txtConsulta.Location = New System.Drawing.Point(12, 270)
         Me.txtConsulta.Name = "txtConsulta"
         Me.txtConsulta.Size = New System.Drawing.Size(123, 20)
         Me.txtConsulta.TabIndex = 12
         Me.txtConsulta.Text = "1002"
+        Me.txtConsulta.Visible = False
         '
         'txtEliminar
         '
-        Me.txtEliminar.Location = New System.Drawing.Point(82, 416)
+        Me.txtEliminar.Location = New System.Drawing.Point(12, 396)
         Me.txtEliminar.Name = "txtEliminar"
         Me.txtEliminar.Size = New System.Drawing.Size(123, 20)
         Me.txtEliminar.TabIndex = 13
         Me.txtEliminar.Text = "1001"
+        Me.txtEliminar.Visible = False
         '
         'txtInsertar
         '
-        Me.txtInsertar.Location = New System.Drawing.Point(82, 232)
+        Me.txtInsertar.Location = New System.Drawing.Point(12, 212)
         Me.txtInsertar.Name = "txtInsertar"
         Me.txtInsertar.Size = New System.Drawing.Size(123, 20)
         Me.txtInsertar.TabIndex = 14
         Me.txtInsertar.Text = "1001"
+        Me.txtInsertar.Visible = False
         '
         'txtEditar
         '
-        Me.txtEditar.Location = New System.Drawing.Point(82, 353)
+        Me.txtEditar.Location = New System.Drawing.Point(12, 333)
         Me.txtEditar.Name = "txtEditar"
         Me.txtEditar.Size = New System.Drawing.Size(123, 20)
         Me.txtEditar.TabIndex = 15
         Me.txtEditar.Text = "1002"
+        Me.txtEditar.Visible = False
         '
         'OpenFileDialog1
         '
@@ -176,7 +196,7 @@ Partial Class GUI_Pruebas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1214, 696)
+        Me.ClientSize = New System.Drawing.Size(831, 519)
         Me.Controls.Add(Me.txtEditar)
         Me.Controls.Add(Me.txtInsertar)
         Me.Controls.Add(Me.txtEliminar)
@@ -192,8 +212,11 @@ Partial Class GUI_Pruebas
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.txtPDF)
         Me.Controls.Add(Me.Button1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MinimizeBox = False
         Me.Name = "GUI_Pruebas"
-        Me.Text = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Modo Texto"
         CType(Me.Tabla, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

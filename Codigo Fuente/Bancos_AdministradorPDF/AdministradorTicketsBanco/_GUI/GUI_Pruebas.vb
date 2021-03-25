@@ -159,4 +159,8 @@ Public Class GUI_Pruebas
 
         Cargar()
     End Sub
+
+    Private Sub GUI_Pruebas_Load(sender As Object, e As EventArgs) Handles Me.Load
+        txtPDF.Text = ""
+    End Sub
 End Class

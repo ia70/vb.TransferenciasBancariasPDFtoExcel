@@ -75,6 +75,7 @@ Partial Class GUI_Inicio
         Me.P_Header = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.txtTitulo = New System.Windows.Forms.Label()
+        Me.btnTest = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.P_Left.SuspendLayout()
         Me.P_Fechas.SuspendLayout()
@@ -151,13 +152,13 @@ Partial Class GUI_Inicio
         'OrigenToolStripMenuItem
         '
         Me.OrigenToolStripMenuItem.Name = "OrigenToolStripMenuItem"
-        Me.OrigenToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.OrigenToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
         Me.OrigenToolStripMenuItem.Text = "Ver Bancos Origen"
         '
         'DestinoToolStripMenuItem
         '
         Me.DestinoToolStripMenuItem.Name = "DestinoToolStripMenuItem"
-        Me.DestinoToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.DestinoToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
         Me.DestinoToolStripMenuItem.Text = "Ver Bancos Destino"
         '
         'ImportarNuevoFormatoToolStripMenuItem
@@ -184,37 +185,37 @@ Partial Class GUI_Inicio
         '
         Me.VaciarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TransaccionesToolStripMenuItem, Me.EmpresasToolStripMenuItem1, Me.BancosToolStripMenuItem1, Me.FormatosToolStripMenuItem, Me.TodoToolStripMenuItem})
         Me.VaciarToolStripMenuItem.Name = "VaciarToolStripMenuItem"
-        Me.VaciarToolStripMenuItem.Size = New System.Drawing.Size(106, 22)
+        Me.VaciarToolStripMenuItem.Size = New System.Drawing.Size(105, 22)
         Me.VaciarToolStripMenuItem.Text = "Vaciar"
         '
         'TransaccionesToolStripMenuItem
         '
         Me.TransaccionesToolStripMenuItem.Name = "TransaccionesToolStripMenuItem"
-        Me.TransaccionesToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+        Me.TransaccionesToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
         Me.TransaccionesToolStripMenuItem.Text = "Transacciones"
         '
         'EmpresasToolStripMenuItem1
         '
         Me.EmpresasToolStripMenuItem1.Name = "EmpresasToolStripMenuItem1"
-        Me.EmpresasToolStripMenuItem1.Size = New System.Drawing.Size(149, 22)
+        Me.EmpresasToolStripMenuItem1.Size = New System.Drawing.Size(147, 22)
         Me.EmpresasToolStripMenuItem1.Text = "Empresas"
         '
         'BancosToolStripMenuItem1
         '
         Me.BancosToolStripMenuItem1.Name = "BancosToolStripMenuItem1"
-        Me.BancosToolStripMenuItem1.Size = New System.Drawing.Size(149, 22)
+        Me.BancosToolStripMenuItem1.Size = New System.Drawing.Size(147, 22)
         Me.BancosToolStripMenuItem1.Text = "Bancos"
         '
         'FormatosToolStripMenuItem
         '
         Me.FormatosToolStripMenuItem.Name = "FormatosToolStripMenuItem"
-        Me.FormatosToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+        Me.FormatosToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
         Me.FormatosToolStripMenuItem.Text = "Formatos"
         '
         'TodoToolStripMenuItem
         '
         Me.TodoToolStripMenuItem.Name = "TodoToolStripMenuItem"
-        Me.TodoToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+        Me.TodoToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
         Me.TodoToolStripMenuItem.Text = "Todo"
         '
         'P_Left
@@ -542,6 +543,7 @@ Partial Class GUI_Inicio
         'P_Header
         '
         Me.P_Header.BackgroundImage = Global.AdministradorTicketsBanco.My.Resources.Resources.Textura
+        Me.P_Header.Controls.Add(Me.btnTest)
         Me.P_Header.Controls.Add(Me.PictureBox1)
         Me.P_Header.Controls.Add(Me.txtTitulo)
         Me.P_Header.Dock = System.Windows.Forms.DockStyle.Top
@@ -572,6 +574,18 @@ Partial Class GUI_Inicio
         Me.txtTitulo.TabIndex = 0
         Me.txtTitulo.Text = "Administrador de Transacciones bancarias"
         Me.txtTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'btnTest
+        '
+        Me.btnTest.BackColor = System.Drawing.Color.Transparent
+        Me.btnTest.Dock = System.Windows.Forms.DockStyle.Left
+        Me.btnTest.FlatAppearance.BorderSize = 0
+        Me.btnTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnTest.Location = New System.Drawing.Point(0, 0)
+        Me.btnTest.Name = "btnTest"
+        Me.btnTest.Size = New System.Drawing.Size(18, 95)
+        Me.btnTest.TabIndex = 2
+        Me.btnTest.UseVisualStyleBackColor = False
         '
         'GUI_Inicio
         '
@@ -661,4 +675,5 @@ Partial Class GUI_Inicio
     Friend WithEvents BancosToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents FormatosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TodoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btnTest As Button
 End Class

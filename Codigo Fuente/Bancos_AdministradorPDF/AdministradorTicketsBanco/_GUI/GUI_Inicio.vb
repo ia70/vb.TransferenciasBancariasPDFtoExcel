@@ -368,5 +368,9 @@ Public Class GUI_Inicio
         msg("Base de datos actualizada!")
     End Sub
 
+    Private Sub btnTest_Click(sender As Object, e As EventArgs) Handles btnTest.Click
+        GUI_Pruebas.ShowDialog()
+    End Sub
+
 #End Region
 End Class
