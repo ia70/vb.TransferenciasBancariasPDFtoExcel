@@ -4,7 +4,7 @@ Imports Capa_Datos
 
 Public Class N_Exportar
 #Region "Variables"
-    Private Archivo As Excel.Application
+    Private Archivo As New Excel.Application
     Private Libro As Excel.Workbook
     Private Hoja As Excel.Worksheet
     Private Rango As Excel.Range
@@ -34,7 +34,7 @@ Public Class N_Exportar
 
         Try
             ' Creamos todo lo necesario para un excel
-            Archivo = CreateObject("Excel.Application")
+            ' Archivo = CreateObject("Excel.Application")
             Archivo.Visible = False 'Para que no se muestre mientras se crea
             Libro = Archivo.Workbooks.Add
             Hoja = Libro.ActiveSheet
@@ -169,7 +169,7 @@ Public Class N_Exportar
 
     'GUARDAR EXCEL
     Private Sub ExcelGuardar()
-        Dim DB As New d_Transaccion
+        Dim DB As New D_Transaccion
         Try
             ' Mostramos un dialog para que el usuario indique donde quiere guardar el excel
             Dim saveFileDialog1 As New SaveFileDialog()
