@@ -34,6 +34,7 @@ D:\Docs\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExc
 D:\Docs\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\obj\Debug\AdministradorTicketsBanco.exe
 D:\Docs\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\obj\Debug\AdministradorTicketsBanco.xml
 D:\Docs\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\obj\Debug\AdministradorTicketsBanco.pdb
+D:\Docs\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\obj\Debug\Capa_Presentacion.vbproj.AssemblyReference.cache
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\bin\Debug\AdministradorTicketsBanco.exe.config
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\bin\Debug\AdministradorTicketsBanco.exe
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\bin\Debug\AdministradorTicketsBanco.pdb
@@ -43,6 +44,7 @@ C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPD
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\bin\Debug\Capa_Negocio.dll
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\bin\Debug\itextsharp.dll
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\bin\Debug\Capa_Datos.dll
+C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\bin\Debug\System.Data.SQLite.dll
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\bin\Debug\Capa_Identidad.pdb
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\bin\Debug\Capa_Identidad.xml
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\bin\Debug\Capa_Negocio.pdb
@@ -50,7 +52,9 @@ C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPD
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\bin\Debug\itextsharp.xml
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\bin\Debug\Capa_Datos.pdb
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\bin\Debug\Capa_Datos.xml
-C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\obj\Debug\Capa_Presentacion.vbprojAssemblyReference.cache
+C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\bin\Debug\System.Data.SQLite.pdb
+C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\obj\Debug\Capa_Presentacion.vbproj.AssemblyReference.cache
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\obj\Debug\Capa_Presentacion.vbproj.ResolveComReference.cache
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\obj\Debug\AdministradorTicketsBanco.GUI_BancoDestino.resources
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\obj\Debug\AdministradorTicketsBanco.GUI_BancoOrigen.resources
@@ -71,4 +75,4 @@ C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPD
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\obj\Debug\AdministradorTicketsBanco.exe
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\obj\Debug\AdministradorTicketsBanco.xml
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\obj\Debug\AdministradorTicketsBanco.pdb
-D:\Docs\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\obj\Debug\Capa_Presentacion.vbproj.AssemblyReference.cache
+C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\obj\Debug\Capa_Presentacion.vbproj.SuggestedBindingRedirects.cache

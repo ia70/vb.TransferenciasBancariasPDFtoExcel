@@ -1,0 +1,9 @@
+Para los campos inicio y fin que abarquen mas de unalinea para diferenciar se puede utilizar caracteres especiales
+mismos qu en ejecución serán traducidos para coincidir con el formato a leer.
+
+\n = (Enter | salto de linea)
+\0 = (Vacio | "")
+
+Ejemplo de como se deberia especificar un salto de linea al momento de crear un nuevo formato:
+
+nombre de campo con\ndos lineas

@@ -338,100 +338,108 @@ Public Class N_ImportarPDF
         Respuesta.Banco_destino.Moneda = Formato.Rows(Indice).Item(3).ToString
         Respuesta.C15 = Formato.Rows(Indice).Item(3).ToString
 
-
-        For i = 1 To 17
-            Inicio = 0
-            Fin = 0
-            CampoInicio = CamposInicio.Rows(Indice).Item(i).ToString
-            CampoFin = CamposFin.Rows(Indice).Item(i).ToString
-
-            If CampoInicio.Length > 0 Then
-                If CampoFin = "" Then
-                    CampoFin = Chr(10)
-                End If
-
-                Inicio = InStr(Cadena, CampoInicio)
-                Inicio = Inicio + CampoInicio.Length - 1
-                Fin = InStr(Inicio, Cadena, CampoFin)
-
-                If Fin - Inicio < 1 Then
-                    Dim y As Integer = 1
-                    While Fin - Inicio < 1
-                        Fin = InStr(Inicio + y, Cadena, CampoFin)
-                        y += 1
-                    End While
-                    Fin += 1
-                End If
-
-                Auxiliar = Cadena.Substring(Inicio, Fin - (Inicio + 1))
-                Auxiliar = Auxiliar.Replace(Chr(10), " ")
-
-                '------------
-                Try
-                    If Auxiliar.Substring(0, 1) = " " Then
-                        Auxiliar = Auxiliar.Substring(1, Auxiliar.Length - 1)
-                    End If
-
-                    If Auxiliar.Substring(Auxiliar.Length - 1, 1) = " " Then
-                        Auxiliar = Auxiliar.Substring(0, Auxiliar.Length - 1)
-                    End If
-                Catch ex As Exception
-                    Auxiliar = ""
-                End Try
-
-                '------------
-
-                Respuesta.setValor(i - 1, Auxiliar)
-            End If
-        Next
-
-        'Validación de la clave de rastreo que sea diferente a 0 o null
-        If Respuesta.C0 = "" Then
-            If Respuesta.C13.Length > 2 Then
-                Respuesta.C0 = Respuesta.C13
-            Else
-                If Respuesta.C12.Length > 2 Then
-                    Respuesta.C0 = Respuesta.C12
-                End If
-            End If
-        End If
-        ' FIN VALIDACION CLAVE RASTREO
-
-        'Verifica Si existe clave de rastreo
-
-        If DB.Consultar(Respuesta.C0) Then
-            No_Errores += 1
-            Errores.Add(Ubicacion, "Formato duplicado!.")
-            Return Nothing
-        End If
-
-        ' Continua ejecución normal ---------------------------------------------------------
-
-        If Len(Formato.Rows(Indice).Item(5).ToString) > 0 Then
-            Respuesta.C1 = Formato.Rows(Indice).Item(5).ToString
-        End If
-
-        If Len(Formato.Rows(Indice).Item(6).ToString) > 0 Then
-            Respuesta.C5 = Formato.Rows(Indice).Item(6).ToString
-        End If
-
-        If Respuesta.C8.Length < 2 Then
-            With Respuesta
-                .C5 = ""
-                .C6 = ""
-                .C7 = ""
-                .C8 = ""
-            End With
-        End If
-
-        'ESTABLECIENDO UBICACION DE ARCHIVO
         Try
-            Respuesta.C17 = Path.GetFileName(Ubicacion)
-            If Respuesta.C17.Length = 0 Then
-                Respuesta.C17 = ""
+            For i = 1 To 17
+                Inicio = 0
+                Fin = 0
+                CampoInicio = CamposInicio.Rows(Indice).Item(i).ToString
+                CampoFin = CamposFin.Rows(Indice).Item(i).ToString
+
+                'Se reemplaza caracteres especiales para coincidencia con documento
+                CampoInicio = CampoInicio.Replace("\n", Chr(10))
+                CampoInicio = CampoInicio.Replace("\0", "")
+                CampoFin = CampoFin.Replace("\n", Chr(10))
+                CampoFin = CampoFin.Replace("\0", "")
+
+
+                If CampoInicio.Length > 0 Then
+                    If CampoFin = "" Then
+                        CampoFin = Chr(10)
+                    End If
+
+                    Inicio = InStr(Cadena, CampoInicio)
+                    Inicio = Inicio + CampoInicio.Length - 1
+                    Fin = InStr(Inicio, Cadena, CampoFin)
+
+                    If (Fin - Inicio) < 1 Then
+                        Dim y As Integer = 1
+                        While Fin - Inicio < 1 And y < Cadena.Length
+                            Try
+                                Fin = InStr(Inicio + y, Cadena, CampoFin)
+                            Catch ex As Exception
+                                Exit While
+                            End Try
+                            y += 1
+                        End While
+                        Fin += 1
+                    End If
+
+                    Try
+                        Auxiliar = Cadena.Substring(Inicio, Fin - (Inicio + 1))
+                    Catch ex As Exception
+                        If Inicio > 1 Then
+                            Auxiliar = Cadena.Substring(Inicio)
+                        End If
+                        Auxiliar = ""
+                        Console.WriteLine(ex.Message + vbCrLf + vbCrLf + ex.StackTrace)
+                    End Try
+                    Auxiliar = Auxiliar.Replace(Chr(10), " ")
+                    Auxiliar = Auxiliar.Trim
+
+                    Respuesta.setValor(i - 1, Auxiliar)
+                End If
+            Next
+
+            'Validación de la clave de rastreo que sea diferente a 0 o null
+            If Respuesta.C0 = "" Then
+                If Respuesta.C13.Length > 2 Then
+                    Respuesta.C0 = Respuesta.C13
+                Else
+                    If Respuesta.C12.Length > 2 Then
+                        Respuesta.C0 = Respuesta.C12
+                    End If
+                End If
             End If
+            ' FIN VALIDACION CLAVE RASTREO
+
+            'Verifica Si existe clave de rastreo
+
+            If DB.Consultar(Respuesta.C0) Then
+                No_Errores += 1
+                Errores.Add(Ubicacion, "Formato duplicado!.")
+                Return Nothing
+            End If
+
+            ' Continua ejecución normal ---------------------------------------------------------
+
+            If Len(Formato.Rows(Indice).Item(5).ToString) > 0 Then
+                Respuesta.C1 = Formato.Rows(Indice).Item(5).ToString
+            End If
+
+            If Len(Formato.Rows(Indice).Item(6).ToString) > 0 Then
+                Respuesta.C5 = Formato.Rows(Indice).Item(6).ToString
+            End If
+
+            If Respuesta.C8.Length < 2 Then
+                With Respuesta
+                    .C5 = ""
+                    .C6 = ""
+                    .C7 = ""
+                    .C8 = ""
+                End With
+            End If
+
+            'ESTABLECIENDO UBICACION DE ARCHIVO
+            Try
+                Respuesta.C17 = Path.GetFileName(Ubicacion)
+                If Respuesta.C17.Length = 0 Then
+                    Respuesta.C17 = ""
+                End If
+            Catch ex As Exception
+                Respuesta.C17 = ""
+            End Try
         Catch ex As Exception
-            Respuesta.C17 = ""
+            Console.WriteLine(ex.Message)
         End Try
 
         Return Respuesta

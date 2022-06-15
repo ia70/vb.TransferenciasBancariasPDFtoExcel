@@ -73,9 +73,9 @@ Partial Class GUI_Inicio
         Me.btnDetalles = New System.Windows.Forms.Button()
         Me.btnExportarExcel = New System.Windows.Forms.Button()
         Me.P_Header = New System.Windows.Forms.Panel()
+        Me.btnTest = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.txtTitulo = New System.Windows.Forms.Label()
-        Me.btnTest = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.P_Left.SuspendLayout()
         Me.P_Fechas.SuspendLayout()
@@ -121,19 +121,19 @@ Partial Class GUI_Inicio
         'AgregarToolStripMenuItem
         '
         Me.AgregarToolStripMenuItem.Name = "AgregarToolStripMenuItem"
-        Me.AgregarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.AgregarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AgregarToolStripMenuItem.Text = "Agregar"
         '
         'VincularToolStripMenuItem
         '
         Me.VincularToolStripMenuItem.Name = "VincularToolStripMenuItem"
-        Me.VincularToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.VincularToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.VincularToolStripMenuItem.Text = "Vincular"
         '
         'EliminarToolStripMenuItem
         '
         Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
-        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'ImportarToolStripMenuItem
@@ -152,13 +152,13 @@ Partial Class GUI_Inicio
         'OrigenToolStripMenuItem
         '
         Me.OrigenToolStripMenuItem.Name = "OrigenToolStripMenuItem"
-        Me.OrigenToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
+        Me.OrigenToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.OrigenToolStripMenuItem.Text = "Ver Bancos Origen"
         '
         'DestinoToolStripMenuItem
         '
         Me.DestinoToolStripMenuItem.Name = "DestinoToolStripMenuItem"
-        Me.DestinoToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
+        Me.DestinoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.DestinoToolStripMenuItem.Text = "Ver Bancos Destino"
         '
         'ImportarNuevoFormatoToolStripMenuItem
@@ -552,6 +552,18 @@ Partial Class GUI_Inicio
         Me.P_Header.Size = New System.Drawing.Size(1147, 95)
         Me.P_Header.TabIndex = 1
         '
+        'btnTest
+        '
+        Me.btnTest.BackColor = System.Drawing.Color.Transparent
+        Me.btnTest.Dock = System.Windows.Forms.DockStyle.Left
+        Me.btnTest.FlatAppearance.BorderSize = 0
+        Me.btnTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnTest.Location = New System.Drawing.Point(0, 0)
+        Me.btnTest.Name = "btnTest"
+        Me.btnTest.Size = New System.Drawing.Size(18, 95)
+        Me.btnTest.TabIndex = 2
+        Me.btnTest.UseVisualStyleBackColor = False
+        '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
@@ -574,18 +586,6 @@ Partial Class GUI_Inicio
         Me.txtTitulo.TabIndex = 0
         Me.txtTitulo.Text = "Administrador de Transacciones bancarias"
         Me.txtTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'btnTest
-        '
-        Me.btnTest.BackColor = System.Drawing.Color.Transparent
-        Me.btnTest.Dock = System.Windows.Forms.DockStyle.Left
-        Me.btnTest.FlatAppearance.BorderSize = 0
-        Me.btnTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnTest.Location = New System.Drawing.Point(0, 0)
-        Me.btnTest.Name = "btnTest"
-        Me.btnTest.Size = New System.Drawing.Size(18, 95)
-        Me.btnTest.TabIndex = 2
-        Me.btnTest.UseVisualStyleBackColor = False
         '
         'GUI_Inicio
         '
