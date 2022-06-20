@@ -129,6 +129,20 @@ Capa_Negocio
  <param name="Ubicacion">Path del archivo</param>
  <returns></returns>
 </member>
+<member name="M:Capa_Negocio.N_ImportarPDF.Complementos(System.String,Capa_Identidad.I_Transaccion)">
+ <summary>
+ Complemento Formatos
+ </summary>
+ <param name="obj"></param>
+ <returns></returns>
+</member>
+<member name="M:Capa_Negocio.N_ImportarPDF.c_f15(System.String,Capa_Identidad.I_Transaccion)">
+ <summary>
+ Complemento del formato 15
+ </summary>
+ <param name="obj"></param>
+ <returns></returns>
+</member>
 <member name="M:Capa_Negocio.N_TR_Procesada.Insertar(System.String)">
  <summary>
  Insertar Transacción

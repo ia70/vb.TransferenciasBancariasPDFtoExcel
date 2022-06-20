@@ -149,14 +149,14 @@ Partial Class GUI_ImportarPDF
         Me.Column5.HeaderText = "Cuenta Destino"
         Me.Column5.Name = "Column5"
         Me.Column5.ReadOnly = True
-        Me.Column5.Width = 151
+        Me.Column5.Width = 150
         '
         'Column6
         '
         Me.Column6.HeaderText = "RFC Destino"
         Me.Column6.Name = "Column6"
         Me.Column6.ReadOnly = True
-        Me.Column6.Width = 133
+        Me.Column6.Width = 132
         '
         'Column7
         '

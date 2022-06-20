@@ -351,6 +351,9 @@ Public Class N_ImportarPDF
                 CampoFin = CampoFin.Replace("\n", Chr(10))
                 CampoFin = CampoFin.Replace("\0", "")
 
+                If CampoInicio.Contains("COMPLEMENTO") Then
+                    Continue For
+                End If
 
                 If CampoInicio.Length > 0 Then
                     If CampoFin = "" Then
@@ -389,6 +392,12 @@ Public Class N_ImportarPDF
                     Respuesta.setValor(i - 1, Auxiliar)
                 End If
             Next
+
+            'AQUI SE INSERT LOS COMPLEMENTOS DE LOS FORMATOS --------------------
+
+            Respuesta = Complementos(Cadena, Respuesta)
+
+            '-----FIN COMPLEMENTOS FORMATO **************************************
 
             'Validación de la clave de rastreo que sea diferente a 0 o null
             If Respuesta.C0 = "" Then
@@ -445,6 +454,8 @@ Public Class N_ImportarPDF
         Return Respuesta
     End Function
 
+
+
     Private Sub CargarDatos()
         Dim _Formato As New D_Formato
         Dim _CN As New D_CamposNombre
@@ -459,4 +470,109 @@ Public Class N_ImportarPDF
     End Sub
 #End Region
 #End Region
+#Region "Complementos de formatos"
+    ''' <summary>
+    ''' Complemento Formatos
+    ''' </summary>
+    ''' <param name="obj"></param>
+    ''' <returns></returns>
+    Private Function Complementos(ByVal cadena As String, ByVal obj As I_Transaccion) As I_Transaccion
+        Try
+            Select Case obj.Idformato
+                Case "F15"
+                    Return c_f15(cadena, obj)
+                Case Else
+                    Return obj
+            End Select
+        Catch ex As Exception
+        End Try
+
+        Return Nothing
+    End Function
+
+    ''' <summary>
+    ''' Complemento del formato 15
+    ''' </summary>
+    ''' <param name="obj"></param>
+    ''' <returns></returns>
+    Private Function c_f15(ByVal cadena As String, ByVal obj As I_Transaccion) As I_Transaccion
+        Dim _cadena As String
+        Dim _ind1, _ind2 As Integer
+        Dim _NoCuentaOrdenante, _NombreCuentaOrdenante, _NoCuentaDestino, _NombreCuentaDestino As String
+
+        _NoCuentaOrdenante = ""
+        _NombreCuentaOrdenante = ""
+        _NoCuentaDestino = ""
+        _NombreCuentaDestino = ""
+
+        Try
+            _cadena = cadena.Replace(Chr(10), " ")
+            _cadena = _cadena.Replace(vbCr, " ")
+            _cadena = _cadena.Replace(vbCrLf, " ")
+
+            _ind1 = _cadena.IndexOf("Descripción")
+            _cadena = _cadena.Substring(_ind1 + 12)
+
+            _ind1 = _cadena.IndexOf("-")
+
+            _ind2 = getIndiceInverso(" ", _cadena.Substring(0, _ind1))
+
+            If _ind1 > 0 AndAlso _ind2 < _ind1 Then
+                'Numero de cuenta ordenante
+                _NoCuentaOrdenante = _cadena.Substring(_ind2 + 1, _ind1 - _ind2 - 1).Trim
+                _cadena = _cadena.Substring(_ind1 + 1)
+
+                _ind1 = _cadena.IndexOf("-")
+                If _ind1 > 0 AndAlso _ind2 < _ind1 Then
+                    _ind2 = getIndiceInverso(" ", _cadena.Substring(0, _ind1))
+                    'Numero de cuenta destino
+                    _NoCuentaDestino = _cadena.Substring(_ind2 + 1, _ind1 - _ind2 - 1).Trim
+
+                    _NombreCuentaOrdenante = _cadena.Substring(0, _ind2).Trim
+                    _ind1 += 1
+                    _cadena = _cadena.Substring(_ind1)
+                    _ind1 = _cadena.IndexOf("$")
+
+                    If _ind1 > 0 Then
+                        _NombreCuentaDestino = _cadena.Substring(0, _ind1).Trim
+                    End If
+                End If
+            End If
+
+
+            'Asignacion de valores en objeto
+            obj.C2 = _NombreCuentaOrdenante
+            obj.C4 = _NoCuentaOrdenante
+            obj.C6 = _NombreCuentaDestino
+            obj.C8 = _NoCuentaDestino
+
+        Catch ex As Exception
+        End Try
+
+        Return obj
+    End Function
+
+    Private Function getIndiceInverso(ByVal _caracter As String, cadena As String) As Integer
+        Dim indice As Integer
+        Try
+            If cadena.Length <= 1 Then
+                Return -1
+            End If
+
+            indice = cadena.Length - 2
+
+            While indice >= 0
+                If cadena(indice) = _caracter Then
+                    Return indice
+                End If
+                indice -= 1
+            End While
+
+        Catch ex As Exception
+        End Try
+
+        Return -1
+    End Function
+#End Region
+
 End Class

@@ -75,4 +75,3 @@ C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPD
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\obj\Debug\AdministradorTicketsBanco.exe
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\obj\Debug\AdministradorTicketsBanco.xml
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\obj\Debug\AdministradorTicketsBanco.pdb
-C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.TransferenciasBancariasPDFtoExcel\Codigo Fuente\Bancos_AdministradorPDF\AdministradorTicketsBanco\obj\Debug\Capa_Presentacion.vbproj.SuggestedBindingRedirects.cache
