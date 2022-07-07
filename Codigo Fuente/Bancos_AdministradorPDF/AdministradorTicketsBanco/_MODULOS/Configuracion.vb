@@ -18,19 +18,21 @@
     ''' <param name="Tipo">Tipo de mensaje</param>
     Public Sub msg(ByVal Mensaje As String, ByVal Optional Tipo As Integer = 0)
         Dim NombreEmpresa As String = "Administrador de bancos"
-
-        Select Case Tipo
-            Case 0
-                MsgBox(Mensaje, vbInformation, NombreEmpresa)
-            Case 1
-                MsgBox(Mensaje, vbExclamation, NombreEmpresa)
-            Case 2
-                MsgBox(Mensaje, vbCritical, NombreEmpresa)
-            Case 3
-                MsgBox(Mensaje, vbQuestion, NombreEmpresa)
-            Case Else
-                MsgBox(Mensaje, vbInformation, NombreEmpresa)
-        End Select
+        Try
+            Select Case Tipo
+                Case 0
+                    MsgBox(Mensaje, vbInformation, NombreEmpresa)
+                Case 1
+                    MsgBox(Mensaje, vbExclamation, NombreEmpresa)
+                Case 2
+                    MsgBox(Mensaje, vbCritical, NombreEmpresa)
+                Case 3
+                    MsgBox(Mensaje, vbQuestion, NombreEmpresa)
+                Case Else
+                    MsgBox(Mensaje, vbInformation, NombreEmpresa)
+            End Select
+        Catch ex As Exception
+        End Try
     End Sub
 
     ''' <summary>

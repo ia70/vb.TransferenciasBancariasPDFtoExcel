@@ -128,27 +128,22 @@ Public Class N_ImportarPDF
         Dim v1 As Boolean = False
         Dim v2 As Boolean = False
         Dim v3 As Boolean = False
-        Dim v4 As Boolean = False
 
         No_Errores += 1
 
-        If InStr(Cadena, "Importe") > 0 Then
+        If InStr(Cadena.ToLower, "importe") > 0 OrElse InStr(Cadena.ToLower, "monto") > 0 Then
             v1 = True
         End If
 
-        If InStr(Cadena, "Cuenta") > 0 Or InStr(Cadena, "cuenta") > 0 Then
+        If InStr(Cadena.ToLower, "cuenta") > 0 Then
             v2 = True
         End If
 
-        If InStr(Cadena, "Fecha") > 0 Then
+        If InStr(Cadena.ToLower, "fecha") > 0 Then
             v3 = True
         End If
 
-        If InStr(Cadena, "$") > 0 Then
-            v4 = True
-        End If
-
-        If v1 And v2 And v3 And v4 Then
+        If v1 And v2 And v3 Then
             Errores.Add(Ubicacion, "Formato no registrado!.")
         Else
             Errores.Add(Ubicacion, "No es reporte bancario!.")
@@ -393,7 +388,7 @@ Public Class N_ImportarPDF
                 End If
             Next
 
-            'AQUI SE INSERT LOS COMPLEMENTOS DE LOS FORMATOS --------------------
+            'AQUI SE INSERTAN LOS COMPLEMENTOS DE LOS FORMATOS --------------------
 
             Respuesta = Complementos(Cadena, Respuesta)
 
