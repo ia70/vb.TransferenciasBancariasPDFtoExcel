@@ -1,5 +1,5 @@
 F002
-INSTITUCIÓN DE BANCA MÚLTIPLE, GRUPO FINANCIERO BBVA MÉXICO
+GRUPO FINANCIERO BBVA 
 Nombre corto: 
 MXN
 0
@@ -7,11 +7,11 @@ BBVA Bancomer
 
 Clave de rastreo
 Banco origen
-
+Ordenante
 
 Cuenta de retiro
 Banco destino
-Nombre corto
+Beneficiario
 
 Cuenta de depósito
 
@@ -24,11 +24,11 @@ Moneda
 Fecha de operación
 rastreo: 
 
-
+Mis operaciones frecuentes - Traspasos a otros bancos\n
 
 retiro: 
 destino: 
-corto: 
+Datos del beneficiario\nNombre: 
 
 depósito: 
 

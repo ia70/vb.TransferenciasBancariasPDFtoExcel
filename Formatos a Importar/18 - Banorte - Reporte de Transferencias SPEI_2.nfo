@@ -1,6 +1,6 @@
-F005
-BANCO MERCANTIL DEL NORTE S.A.
-Cuenta/ CLABE Beneficiario
+F018
+BANCO MERCANTIL DEL NORTE S.A
+Cuenta/CLABE/Celular
 MXN
 0
 Banorte
@@ -24,13 +24,13 @@ Moneda
 Fecha Aplicación
 Rastreo 
 
-e del Ordenante 
+e del Ordenante\n
 P del Ordenante 
 E Ordenante 
 Destino 
-e del Beneficiario 
+e del Beneficiario\n
 C Beneficiario 
-E Beneficiario 
+Cuenta/CLABE/Celular 
 
 a Transferencia 
 
@@ -38,14 +38,14 @@ Referencia
 
 $
 
-Fecha de Ejecución 
+Ejecución 
+
+
+RFC o CURP del Ordenante
 
 
 
-
-
-
-
+Cuenta/CLABE/Celular
 
 
 
