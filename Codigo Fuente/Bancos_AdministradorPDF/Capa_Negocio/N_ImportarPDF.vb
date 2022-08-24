@@ -357,7 +357,14 @@ Public Class N_ImportarPDF
 
                     Inicio = InStr(Cadena, CampoInicio)
                     Inicio = Inicio + CampoInicio.Length - 1
-                    Fin = InStr(Inicio, Cadena, CampoFin)
+
+                    'Si se especifica fin de archivo
+                    If CampoFin = "\f" Then
+                        Fin = Cadena.Length
+                    Else
+                        Fin = InStr(Inicio, Cadena, CampoFin)
+                    End If
+
 
                     If (Fin - Inicio) < 1 Then
                         Dim y As Integer = 1
@@ -373,7 +380,11 @@ Public Class N_ImportarPDF
                     End If
 
                     Try
-                        Auxiliar = Cadena.Substring(Inicio, Fin - (Inicio + 1))
+                        If CampoFin = "\f" Then
+                            Auxiliar = Cadena.Substring(Inicio, Fin - Inicio)
+                        Else
+                            Auxiliar = Cadena.Substring(Inicio, Fin - (Inicio + 1))
+                        End If
                     Catch ex As Exception
                         If Inicio > 1 Then
                             Auxiliar = Cadena.Substring(Inicio)

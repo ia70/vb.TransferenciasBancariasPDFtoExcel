@@ -3,6 +3,7 @@ mismos qu en ejecución serán traducidos para coincidir con el formato a leer.
 
 \n = (Enter | salto de linea)
 \0 = (Vacio | "")
+\f = (Final de archivo)
 
 Ejemplo de como se deberia especificar un salto de linea al momento de crear un nuevo formato:
 
